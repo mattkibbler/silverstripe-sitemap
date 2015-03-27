@@ -4,15 +4,15 @@
  */
 class SitemapPage extends Page {
 
-	public static $db = array (
+	private static $db = array (
 		'PagesToDisplay' => "Enum('All, ChildrenOf, Selected', 'All')"
 	);
 
-	public static $has_one = array (
+	private static $has_one = array (
 		'ParentPage' => 'SiteTree'
 	);
 
-	public static $many_many = array (
+	private static $many_many = array (
 		'PagesToShow' => 'SiteTree'
 	);
 
